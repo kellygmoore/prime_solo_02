@@ -3,6 +3,7 @@
 //I changed line 35 by using parseInt to change string to number
 //I changed line 81 by taking out the basePercent - 1
 //Line 50 & 53 I switched
+//Added style.css to take out bullets and used .join to add space inbetween
 
 var arrayAtticus = ["Atticus", "2405", "47000", 3];
 var arrayJem = ["Jem", "62347", "63500", 4];
@@ -22,7 +23,7 @@ position = document.getElementById('content');
 for(var i = 0; i < array.length; i++){
 	array[i] = calculateSTI(array[i]);
  	newEl = document.createElement('li');
-	newText = document.createTextNode(array[i]);
+	newText = document.createTextNode((array[i]).join(" | "));
 	newEl.appendChild(newText);
 	position.appendChild(newEl);
 }
